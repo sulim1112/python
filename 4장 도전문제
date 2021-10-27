@@ -1,0 +1,172 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled7.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyMaHBCqzcGclumrpNRhINjQ",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/sulim1112/python/blob/main/4%EC%9E%A5%20%EB%8F%84%EC%A0%84%EB%AC%B8%EC%A0%9C\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "XOrUNQuuHre_"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "JbyL7slXH7Vq"
+      },
+      "source": [
+        "4장 도전문제\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "egdKFFC8H_lR"
+      },
+      "source": [
+        "import turtle\n",
+        "t = turtle.Turtle()\n",
+        "t.shape(\"turtle\")\n",
+        "\n",
+        "s = turtle.textinput(\"\",\"이름을 입력하시오: \")\n",
+        "\n",
+        "for i in range(4):\n",
+        "    t.write(\"안녕하세요?\" + s + \"씨, 터틀 인사드립니다.\")\n",
+        "    t.left(90)\n",
+        "    t.forward(100)\n",
+        "    "
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "H9eD8XzFKEfB",
+        "outputId": "b58a4faf-30ce-4cce-beee-65cebe0b9f6e"
+      },
+      "source": [
+        "print(\"안녕하세요?\")\n",
+        "name = input(\"이름이 어떻게 되시나요?\")\n",
+        "print(\"만나서 반갑습니다.\" + name + \"씨\")\n",
+        "print(\"이름의 길이는 다음과 같군요:\", end = \"\")\n",
+        "print(len(name))\n",
+        "age = int(input(\"나이가 어떻게 되나요? \"))\n",
+        "print(\"내년이면\", str(age+1),\"이 되시는군요.\")\n",
+        "hobby = input(\"취미가 무엇인가요?\")\n",
+        "print(\"네 저도 \"+hobby+\" 좋아합니다.\")"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "안녕하세요?\n",
+            "이름이 어떻게 되시나요?배수림\n",
+            "만나서 반갑습니다.배수림씨\n",
+            "이름의 길이는 다음과 같군요:3\n",
+            "나이가 어떻게 되나요? 20\n",
+            "내년이면 21 이 되시는군요.\n",
+            "취미가 무엇인가요?외출\n",
+            "네 저도 외출 좋아합니다.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Eaj_2h6EL-_R",
+        "outputId": "b304b859-137a-4cc8-fc73-e1df9b0b1778"
+      },
+      "source": [
+        "year = input(\"오늘의 연도를 입력하시오: \")\n",
+        "month = input(\"오늘의 월을 입력하시오: \")\n",
+        "date = input(\"오늘의 일을 입력하시오: \")\n",
+        "\n",
+        "print(month+\"/\", date+\"/\", year)"
+      ],
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "오늘의 연도를 입력하시오: 2021\n",
+            "오늘의 월을 입력하시오: 10\n",
+            "오늘의 일을 입력하시오: 27\n",
+            "10/ 27/ 2021\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WKOP308LMxYU",
+        "outputId": "c4103974-43a2-4910-a3ce-9a68176dc238"
+      },
+      "source": [
+        "import time\n",
+        "\n",
+        "now = time.time()\n",
+        "thisyear = int(1970 + now//(365*24*3600))\n",
+        "\n",
+        "print(\"올해는 \", thisyear, \"입니다.\")\n",
+        "age = int(input(\"몇 살이신지요?\"))\n",
+        "print(\"2050년에는 \",(age+2050-thisyear),\"살 이시군요\")"
+      ],
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "올해는  2021 입니다.\n",
+            "몇 살이신지요?20\n",
+            "2050년에는  49 살 이시군요\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
